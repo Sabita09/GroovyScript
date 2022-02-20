@@ -10,7 +10,7 @@ pipeline{
         //This can be http or https
         NEXUS_PROTOCOL= "http"
         //Where your Nexus is running
-        NEXUS_URL= "172.16.16.102:8081"
+        NEXUS_URL= "172.16.16.101:8081"
         // Repository Name where we will upload the artifacts
         NEXUS_REPOSITORY= "test-snapshot"
         // Jenkins credentials id to authenticate to Nexus OSS
@@ -19,7 +19,7 @@ pipeline{
     stages{
         stage('Git checkout'){
             steps{
-                git credentialsId: 'github-creds', url: 'https://github.com/helloindiadevops/login.git'
+                git credentialsId: 'github-creds', url: 'https://github.com/sabita/login.git'
             }
         }
     stage('Sonarqube code quality') {
