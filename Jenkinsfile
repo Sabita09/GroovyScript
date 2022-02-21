@@ -24,7 +24,7 @@ pipeline{
         }
     stage('Sonarqube code quality') {
     environment {
-        scannerHome = tool 'sonar'
+        scannerHome = tool 'sonarQubeScanner'
         }
     steps {
         echo "$JOB_NAME"
