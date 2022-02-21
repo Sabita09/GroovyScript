@@ -19,7 +19,7 @@ pipeline{
     stages{
         stage('Git checkout'){
             steps{
-                git credentialsId: 'github-creds', url: 'https://github.com/sabita/login.git'
+                git credentialsId: 'github-creds', url: 'https://github.com/Sabita09/loginapp.git'
             }
         }
     stage('Sonarqube code quality') {
